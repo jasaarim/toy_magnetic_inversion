@@ -17,7 +17,7 @@ The inversion algorithm is an iterative one, so that at each step
 first-order (i.e. linear) response is estimated with current parameter
 values and new parameter values are set by optimizing this linear
 model. Eventually the parameter values approach a local optimum and
-the iteration converges. 
+the iteration converges.
 
 In computing the real responses we have to approximate an integral of
 two variables. Originally the integrand was written as Python
@@ -30,3 +30,8 @@ The Fortran code can be compiled to a Python extension with
 ::
 
     f2py -c -m integrand integrand.f
+
+The inversion algorithm is adapted from William Menke's (1988)
+"Geophysical data analysis: discrete inverse theory" and the forward
+model computation from Richard Blakely's (1995) "Potential theory in
+gravity and magnetic applications."
